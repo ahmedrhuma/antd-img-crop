@@ -88,6 +88,7 @@ const ImgCrop = forwardRef((props, ref) => {
     modalWidth,
     modalOk,
     modalCancel,
+    extraContent,
     children,
   } = props;
 
@@ -318,6 +319,7 @@ const ImgCrop = forwardRef((props, ref) => {
                   </button>
                 </div>
               )}
+              {extraContent}
             </Modal>
           )}
         </>
@@ -331,6 +333,7 @@ ImgCrop.propTypes = {
   shape: t.oneOf(['rect', 'round']),
   zoom: t.bool,
   grid: t.bool,
+  extraContent: t.node,
   rotate: t.bool,
   beforeCrop: t.func,
   modalTitle: t.string,
